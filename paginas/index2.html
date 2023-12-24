@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes App</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Clientes App</h1>
+  </header>
+
+  <main>
+    <section id="clientes">
+      <!-- Aquí se mostrarán los clientes -->
+    </section>
+  </main>
+
+  <!-- Formulario para crear clientes -->
+  <form id="formulario-cliente">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" required>
+
+    <button type="submit">Crear Cliente</button>
+  </form>
+
+  <!-- Modal para editar clientes -->
+  <div id="modal-editar" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModalEditar()">×</span>
+      <h2>Editar Cliente</h2>
+      <form id="formulario-editar">
+        <input type="hidden" id="editId" />
+        <label for="editNombre">Nombre:</label>
+        <input type="text" id="editNombre" required>
+
+        <label for="editCorreo">Correo:</label>
+        <input type="email" id="editCorreo" required>
+
+        <button type="submit" onclick="guardarEdicion()">Guardar Cambios</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2023 Clientes App</p>
+  </footer>
+
+  <!-- Importar el script de JavaScript específico para Cliente -->
+  <script src="../scripts/cliente.js"></script>
+</body>
+</html>

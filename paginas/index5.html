@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Frontend App</h1>
+    </header>
+
+    <main>
+        <section id="ventas">
+            <!-- Aquí se mostrarán las ventas -->
+        </section>
+    </main>
+
+    <!-- Agrega este formulario en tu HTML -->
+    <form id="formulario-venta">
+        <label for="clienteIdVenta">ID del Cliente:</label>
+        <input type="number" id="clienteIdVenta" required>
+
+        <!-- Añade campos adicionales para el cliente -->
+        <label for="clienteNombreVenta">Nombre del Cliente:</label>
+        <input type="text" id="clienteNombreVenta" required>
+
+        <label for="clienteApellidoVenta">Apellido del Cliente:</label>
+        <input type="text" id="clienteApellidoVenta" required>
+
+        <label for="clienteCorreoVenta">Correo del Cliente:</label>
+        <input type="email" id="clienteCorreoVenta" required>
+
+        <button type="submit">Crear Venta</button>
+    </form>
+
+    <!-- Añade este modal en tu HTML para la edición -->
+    <div id="modal-editar-venta" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModalEditarVenta()">×</span>
+            <h2>Editar Venta</h2>
+            <form id="formulario-editar-venta">
+                <input type="hidden" id="editVentaId" />
+
+                <label for="editClienteIdVenta">ID del Cliente:</label>
+                <input type="number" id="editClienteIdVenta" required>
+
+                <!-- Añade campos adicionales para el cliente -->
+                <label for="editClienteNombreVenta">Nombre del Cliente:</label>
+                <input type="text" id="editClienteNombreVenta" required>
+
+                <label for="editClienteApellidoVenta">Apellido del Cliente:</label>
+                <input type="text" id="editClienteApellidoVenta" required>
+
+                <label for="editClienteCorreoVenta">Correo del Cliente:</label>
+                <input type="email" id="editClienteCorreoVenta" required>
+
+                <button type="button" onclick="guardarEdicionVenta()">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 Frontend App</p>
+    </footer>
+
+    <script src="../scripts/ventas.js"></script>
+</body>
+
+</html>

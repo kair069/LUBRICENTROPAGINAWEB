@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend App</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Frontend App</h1>
+</header>
+
+<main>
+    <section id="pedidos">
+        <!-- Aquí se mostrarán los pedidos -->
+    </section>
+</main>
+
+<!-- Agrega este formulario en tu HTML -->
+<!-- Agrega este formulario en tu HTML -->
+<form id="formulario-pedido">
+    <label for="clienteId">ID del Cliente:</label>
+    <input type="number" id="clienteId" required>
+
+    <!-- Añade campos adicionales para el cliente -->
+    <label for="clienteNombre">Nombre del Cliente:</label>
+    <input type="text" id="clienteNombre" required>
+
+    <label for="clienteApellido">Apellido del Cliente:</label>
+    <input type="text" id="clienteApellido" required>
+
+    <label for="clienteCorreo">Correo del Cliente:</label>
+    <input type="email" id="clienteCorreo" required>
+
+    <button type="submit">Crear Pedido</button>
+</form>
+
+<!-- Añade este modal en tu HTML -->
+
+<div id="modal-editar" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModalEditar()">×</span>
+        <h2>Editar Pedido</h2>
+        <form id="formulario-editar">
+            <input type="hidden" id="editId" />
+            <label for="editClienteId">ID del Cliente:</label>
+            <input type="number" id="editClienteId" required />
+
+            <button type="button" onclick="guardarEdicion()">Guardar Cambios</button>
+        </form>
+    </div>
+</div>
+
+</body>
+<script src="../scripts/pedidos.js"></script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario App</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Inventario App</h1>
+  </header>
+
+  <main>
+    <section id="inventarios">
+      <!-- Aquí se mostrarán los inventarios -->
+    </section>
+  </main>
+
+  <!-- Formulario para crear inventarios -->
+  <form id="formulario-inventario">
+    <label for="producto">Producto:</label>
+    <input type="text" id="producto" required>
+
+    <label for="precio">Precio:</label>
+    <input type="text" id="precio" readonly>
+
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" required>
+
+    <button type="submit">Agregar al Inventario</button>
+  </form>
+
+  <!-- Modal para editar inventarios -->
+  <div id="modal-editar-inventario" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModalEditarInventario()">×</span>
+      <h2>Editar Inventario</h2>
+      <form id="formulario-editar-inventario">
+        <input type="hidden" id="editIdInventario" />
+        <label for="editProducto">Producto:</label>
+        <input type="text" id="editProducto" required>
+
+        <label for="editPrecio">Precio:</label>
+        <input type="text" id="editPrecio" readonly>
+
+        <label for="editCantidad">Cantidad:</label>
+        <input type="number" id="editCantidad" required>
+
+        <button type="submit" onclick="guardarEdicionInventario()">Guardar Cambios</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2023 Inventario App</p>
+  </footer>
+
+  <!-- Importar el script de JavaScript específico para Inventario -->
+  <script src="../scripts/inventario.js"></script>
+</body>
+</html>
